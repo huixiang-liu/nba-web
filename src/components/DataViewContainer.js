@@ -30,7 +30,7 @@ export class DataViewContainer extends React.Component {
     render() {
         console.log('render');
         return (
-            <div className="data-view">data view
+            <div className="data-view">
                 <ShotChart
                     playerId={this.props.playerId}
                     minCount={this.state.minCount}
