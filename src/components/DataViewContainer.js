@@ -14,16 +14,14 @@ export class DataViewContainer extends React.Component {
     }
 
     onCountSliderChange = (count) => {
-        this.setState({ minCount: count });
+        this.setState({ minCount: count || 2});
     }
 
     onChartTypeChange = (e) => {
-        console.log(e.target.value);
         this.setState({ chartType: e.target.value });
     }
 
     onTooltipChange = (displayTooltip) => {
-        console.log(displayTooltip);
         this.setState({ displayTooltip });
     }
 
@@ -42,14 +40,15 @@ export class DataViewContainer extends React.Component {
                         <CountSlider value={this.state.minCount}
                                      onCountSliderChange={_.debounce(this.onCountSliderChange, 500)}/> : null}
                     <br/>
-                    <Row>
-                        <Col span={9}>
+                    <Row className="chart-type-radio">
+                        <Col span={12} offset={3}>
                             <RadioGroup onChange={this.onChartTypeChange} value={this.state.chartType}>
                                 <Radio value="hexbin">Hexbin</Radio>
                                 <Radio value="scatter">Scatter</Radio>
                             </RadioGroup>
                         </Col>
-                        <Col span={4}>
+                        <Col span={6}>
+                            Tooltip:{' '}
                             <Switch
                                 checkedChildren="On"
                                 unCheckedChildren="Off"
