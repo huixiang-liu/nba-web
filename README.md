@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## DEMO
+![DEMO](https://github.com/huixiang-liu/nba-web/blob/master/demo/demo.gif)
 
 In the project directory, you can run:
 
